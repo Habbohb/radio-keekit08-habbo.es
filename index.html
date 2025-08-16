@@ -23,13 +23,36 @@
     }
     .cover {
       margin-top: 30px;
+      position: relative;
+      width: 250px;
+      height: 250px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .cover img {
+      position: absolute;
       width: 250px;
       height: 250px;
       border-radius: 50%;
       border: 5px solid #1EB683;
       box-shadow: 0 0 20px #1EB683;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      animation: fade 6s infinite;
+    }
+    .cover img:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .cover img:nth-child(2) {
+      animation-delay: 3s;
+    }
+    @keyframes fade {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      40% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 0; }
     }
     .player-section {
       margin-top: 20px;
@@ -53,7 +76,8 @@
   </header>
 
   <div class="cover">
-    <img src="https://www.habbo.es/habbo-imaging/avatar/hr-170-40.hd-180-14.ch-3203-63.lg-285-1413.sh-290-1408.ha-3129-1413.fa-1206-63.cc-3039-1413%2Cs-2.g-1.d-2.h-2.a-0%2C99d9e3c30e859773826a65f1016ee82a.png" alt="Portada de la Radio">
+    <img src="habbo.png" alt="Imagen habbo 1">
+    <img src="habbo2.png" alt="Imagen habbo 2">
   </div>
 
   <div class="player-section">
@@ -72,8 +96,13 @@
     <script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
   </div>
 
-  <footer>
-    © 2025 Radio de keekit08 -> Todos los derechos reservados
+  <footer style="font-size: 1.1em;">
+    © 2025 Radio de 
+    <a href="https://www.habbo.es/profile/keekit08" target="_blank" style="color: white; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px;">
+      keekit08 
+      <img src="https://www.habbo.es/habbo-imaging/avatar/hr-170-40.hd-180-14.ch-3203-63.lg-285-1413.sh-290-1408.ha-3129-1413.fa-1206-63.cc-3039-1413%2Cs-2.g-1.d-2.h-2.a-0%2C99d9e3c30e859773826a65f1016ee82a.png" alt="Avatar de keekit08" style="width: 40px; height: 40px; border-radius: 8px; vertical-align: middle;">
+    </a> 
+    -> Todos los derechos reservados
   </footer>
 
 </body>
